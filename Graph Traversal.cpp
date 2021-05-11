@@ -1,12 +1,15 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 
 class Graph
 {	
+	
 	int v;
 	map<int,list<int>> edges;
 	
 	public:
+	
 		Graph(int v){this->v=v;}
 		void addEdge(int v,int u)
 		{
@@ -14,7 +17,7 @@ class Graph
 			edges[u].push_back(v);
 		}
 
-		void bfs(int src) // breath first search
+		void bfs(int src) 
 		{
 			map<int,bool> visited;
 			queue<int> wait;
@@ -47,7 +50,7 @@ class Graph
 			cout<<"\n";
 		}
 
-		void dfs(int src,map<int,bool> &visited)//depth first search
+		void dfs(int src,map<int,bool> &visited)
 		{
 			cout<<src<<" ";
 			visited[src]=true;
